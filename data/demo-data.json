@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "mode": "demo",
+    "notice": "仅用于原型验证；不包含真实人员、菜单或密码。"
+  },
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "全国管理员",
+      "email": "admin@example.test",
+      "role": "national_admin",
+      "division": "全国"
+    },
+    {
+      "id": "u-city-lead",
+      "name": "成都主管",
+      "email": "chengdu.lead@example.test",
+      "role": "city_manager",
+      "division": "成都区部",
+      "city": "成都"
+    },
+    {
+      "id": "u-manager",
+      "name": "成都客户经理",
+      "email": "cd.manager@example.test",
+      "role": "account_manager",
+      "division": "成都区部",
+      "city": "成都",
+      "managerId": "u-city-lead"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p-dd-bj",
+      "division": "北京区部",
+      "scenario": "平台餐饮",
+      "name": "滴滴（北京）",
+      "type": "联动客户",
+      "linkedCustomer": "滴滴"
+    },
+    {
+      "id": "p-dd-cd",
+      "division": "成都区部",
+      "scenario": "平台餐饮",
+      "name": "滴滴（成都）",
+      "type": "联动客户",
+      "linkedCustomer": "滴滴"
+    },
+    {
+      "id": "p-bili-cd",
+      "division": "成都区部",
+      "scenario": "平台餐饮",
+      "name": "哔哩哔哩（成都）",
+      "type": "单点客户",
+      "linkedCustomer": null
+    }
+  ],
+  "templates": [
+    {
+      "id": "t-dd-standard",
+      "projectId": "p-dd-cd",
+      "name": "标准周菜单",
+      "default": true,
+      "mergedCells": true,
+      "mealTypes": [
+        "早",
+        "午",
+        "晚"
+      ],
+      "bannedIngredients": [
+        "花生",
+        "牛肉"
+      ]
+    }
+  ],
+  "menus": [
+    {
+      "id": "m-dd-cd-2026w47",
+      "projectId": "p-dd-cd",
+      "city": "成都",
+      "weekStart": "2026-11-16",
+      "weekEnd": "2026-11-22",
+      "status": "draft"
+    }
+  ]
+}
